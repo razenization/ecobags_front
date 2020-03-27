@@ -1110,27 +1110,216 @@ function Calculator(bagType, size, color, paint, quantity) {
 		$('.res-th').text(result);
 		return result;
 	};
-	input = document.getElementsByClassName('input__quantity')[0];
-	input.oninput = this.solve.bind(this);
+	input = $('.input__quantity');
+	// input.oninput = this.solve.bind(this);
 	return this;
 }
 
 var calculator = new Calculator();
 
-// function dis(val) 
-// { 
-// 	document.getElementById("result").value+=val 
-// } 
+// function sleep(ms) {
+// 	return new Promise(resolve => setTimeout(resolve, ms));
+// }
 
-// function solve() 
-// { 
-// 	let x = document.getElementById("result").value 
-// 	let y = eval(x) 
-// 	document.getElementById("result").value = y 
-// } 
+let tSlide = $('.type-slide');
+let cSlide = $('.color-slide');
+let sSlide = $('.size-slide');
+let pSlide = $('.print-slide');
+tSlide.hide();
+cSlide.hide();
+sSlide.hide();
+pSlide.hide();
 
-// 	 //function that clear the display 
-// 	 function clr() 
-// 	 { 
-// 	 	document.getElementById("result").value = "" 
-// 	 } 
+$('.btn-type').hover(
+	
+	function () {
+		tSlide.show(80);
+	}, 
+	function () {
+		if (!tSlide.is(':hover')) {
+			tSlide.hide(80);
+		}
+	});
+
+tSlide.hover(function () {}, function () {tSlide.hide(80);});
+
+$('.btn-color').hover(
+	
+	function () {
+		cSlide.show(80);
+	}, 
+	function () {
+		if (!cSlide.is(':hover')) {
+			cSlide.hide(80);
+		}
+	});
+
+cSlide.hover(function () {}, function () {cSlide.hide(80);});
+
+$('.btn-size').hover(
+	
+	function () {
+		sSlide.show(80);
+	}, 
+	function () {
+		if (!sSlide.is(':hover')) {
+			sSlide.hide(80);
+		}
+	});
+
+sSlide.hover(function () {}, function () {sSlide.hide(80);});
+
+$('.btn-print').hover(
+	
+	function () {
+		pSlide.show(80);
+	}, 
+	function () {
+		if (!pSlide.is(':hover')) {
+			pSlide.hide(80);
+		}
+	});
+
+pSlide.hover(function () {}, function () {pSlide.hide(80);});
+
+
+
+
+
+
+
+// $('.btn-type').hover(
+	
+// 	function () {
+		
+// 		tSlide.css({
+// 			"display"		: "flex",
+// 			"visibility"	: "visible"
+// 		});
+// 		tSlide.hover(
+// 			function () {
+// 				tSlide.css({
+// 					"display"		: "flex",
+// 					"visibility"	: "visible"
+// 				});
+// 			}, 
+// 			function () {
+// 				// if (!$('.btn-type').is(":hover")) {
+// 					tSlide.css({
+// 						"display"		: "none",
+// 						"visibility"	: "hidden"
+// 					});
+// 				// }
+// 			});
+// 	}, 
+// 	function () {
+// 		// await sleep(1000); 
+// 		// if (!tSlide.is(":hover")) {
+// 			tSlide.css({
+// 				"display"		: "none",
+// 				"visibility"	: "hidden"
+// 			});
+// 		// }
+// 	});
+
+// $('.btn-color').hover(
+	
+// 	function () {
+		
+// 		cSlide.css({
+// 			"display"		: "flex",
+// 			"visibility"	: "visible"
+// 		});
+// 		cSlide.hover(
+// 			function () {
+// 				cSlide.css({
+// 					"display"		: "flex",
+// 					"visibility"	: "visible"
+// 				});
+// 			}, 
+// 			function () {
+// 				// if (!$('.btn-type').is(":hover")) {
+// 					cSlide.css({
+// 						"display"		: "none",
+// 						"visibility"	: "hidden"
+// 					});
+// 				// }
+// 			});
+// 	}, 
+// 	function () {
+// 		// await sleep(1000); 
+// 		// if (!cSlide.is(":hover")) {
+// 			cSlide.css({
+// 				"display"		: "none",
+// 				"visibility"	: "hidden"
+// 			});
+// 		// }
+// 	});
+
+// $('.btn-size').hover(
+	
+// 	function () {
+		
+// 		sSlide.css({
+// 			"display"		: "flex",
+// 			"visibility"	: "visible"
+// 		});
+// 		sSlide.hover(
+// 			function () {
+// 				sSlide.css({
+// 					"display"		: "flex",
+// 					"visibility"	: "visible"
+// 				});
+// 			}, 
+// 			function () {
+// 				// if (!$('.btn-type').is(":hover")) {
+// 					sSlide.css({
+// 						"display"		: "none",
+// 						"visibility"	: "hidden"
+// 					});
+// 				// }
+// 			});
+// 	}, 
+// 	function () {
+// 		// await sleep(1000); 
+// 		// if (!sSlide.is(":hover")) {
+// 			sSlide.css({
+// 				"display"		: "none",
+// 				"visibility"	: "hidden"
+// 			});
+// 		// }
+// 	});
+
+// $('.btn-print').hover(
+	
+// 	function () {
+		
+// 		pSlide.css({
+// 			"display"		: "flex",
+// 			"visibility"	: "visible"
+// 		});
+// 		pSlide.hover(
+// 			function () {
+// 				pSlide.css({
+// 					"display"		: "flex",
+// 					"visibility"	: "visible"
+// 				});
+// 			}, 
+// 			function () {
+// 				// if (!$('.btn-type').is(":hover")) {
+// 					pSlide.css({
+// 						"display"		: "none",
+// 						"visibility"	: "hidden"
+// 					});
+// 				// }
+// 			});
+// 	}, 
+// 	function () {
+// 		// await sleep(1000); 
+// 		// if (!pSlide.is(":hover")) {
+// 			pSlide.css({
+// 				"display"		: "none",
+// 				"visibility"	: "hidden"
+// 			});
+// 		// }
+// 	});

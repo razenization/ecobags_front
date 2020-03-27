@@ -245,24 +245,60 @@
 
                     <div class="product__header-right">
                         <div class="product__label  product__label--green">new</div>
-                        <a href="#">
+                        <!-- <a href="#"> -->
                             <img class="img" src="https://placehold.it/265x265" alt="">
-                        </a>
+                            <!-- </a> -->
+                        </div>
                     </div>
-                </div>
 
-                <div class="product__main">
-                    <h3 class="product__title">
-                        <a href="#">Lava Vtase</a>
-                    </h3>
-                    <div class="product__price">
-                        <del>$65.00</del>$35.00
+                    <div class="product__main">
+                        <h3 class="product__title">
+                            <p>Lava Vtase</p>
+                        </h3>
+                        <div class="product__price">
+                            <del>$65.00</del>$35.00
+                        </div>
+                        <div class="product__footer">
+                            <button class="product__add" type="button">Add To cart</button>
+                        </div>
                     </div>
-                    <div class="product__footer">
-                        <button class="product__add" type="button">Add To cart</button>
+                </div><!-- /.product -->
+
+                <!-- Trigger/Open The Modal -->
+
+                <!-- The Modal -->
+            <div id="myModal" class="modal">
+
+                  <!-- Modal content -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="close">&times;</span>
+                        <h2>Название товара</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 item__main">
+                            <div class="modal-body">
+                                <img src="assets/img/factory.jpg" alt="" class="item__pic">
+                                <div class="item__info">
+                                    <a class="item__add" title="Добавить в корзину" href="#">
+                                        <span class="add__title">В корзину</span>
+                                        <img src="{% static 'v2/img/icons/add_icon.png' %}" alt="Add" class='products__add-icon'>
+                                    </a>
+                                    <p>Размеры в наличии: <span class="item__sizes">M, L, XXL</span></p>
+                                    <p>Осталось штук: <span class="item__quantity">142</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 item__optional">
+                            <p class="item__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <h3>Ecobags-ua (C)</h3>
                     </div>
                 </div>
-            </div><!-- /.product -->
+            </div>
+
         </div><!-- /.col -->
 
         <div class="col-lg-4  col-md-6  mb-5">
@@ -516,9 +552,6 @@
     </div><!-- /.featured__right -->
 </div><!-- /.featured -->
 
-
-
-
 <!-- Benefits -->
 <div class="benefits">
     <div class="benefits__item">
@@ -550,7 +583,6 @@
         </div>
     </div>
 </div>
-
 
 <!-- Footer -->
 <footer class="footer">
@@ -673,6 +705,7 @@
 <script src="assets/other/jquery-3.4.1.min.js"></script>
 <script src="assets/other/slick/slick.min.js"></script>
 <script src="assets/other/init.js"></script>
+<script src="assets/other/modal.js"></script>
 
 <!-- <script src="assets/js/app.js"></script> -->
 
